@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4">Train Schedule</h1>
+            <p class="lead">Welcome to the train schedule.</p>
+            <hr class="my-4">
+            <p>Three idiots decide to go hunting. The first one says he's going to get a buck. He goes out, and indeed comes
+                back with a buck. The other two hunters ask how he did it. He says, "I see tracks. I follow tracks. I get
+                buck."
+            </p>
+            <p>So the second hunter says that he's going to get a doe. And he does. They ask him how he did it, and he says,
+                "I see tracks. I follow tracks. I get doe."</p>
+                <p>So the third hunter says, "I'm just gonna shoot at anything I see."</p>
+                <p>So he goes out and comes back half a day later all beaten, bruised, bloody, and totally trashed. The other two
+                    hunters ask him what happened and he says, "I see tracks. I follow tracks. I get hit by train!"</p>
+                </div>
+                <table class="table table-dark table-striped " id="trainsTable">
+                    <thead>
+                        <h4>Current Trains</h4>
+                        <tr class="bg-primary text-warning">
+                            <th scope="col">Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency(min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                
+                <div class="container-fluid fields" style="padding:10px">
+                    <h3>Add Train</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput" id="header">Train Name</label>
+                            <input type="text" class="form-control" id="submitTrainName" placeholder="Hogwarts Express">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Desination</label>
+                            <input type="text" class="form-control" id="submitDestination" placeholder="Hogsmeade Station">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">First Train (HH:MM 24-hr)</label>
+                            <input type="text" class="form-control" id="submitStartTime" placeholder="05:00">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Frequency (min)</label>
+                            <input type="text" class="form-control" id="submitFrequency" placeholder="45">
+                        </div>
+                        <input class="btn btn-primary" id="submit-button" type="button" value="Submit">
+                    </form>
+                </div>
+                
+                
+            </div>
+            
+        </body>
+        
+        <script src="app.js"></script>
+        </html>
